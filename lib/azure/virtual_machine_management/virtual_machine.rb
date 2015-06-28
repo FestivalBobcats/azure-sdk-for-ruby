@@ -40,6 +40,10 @@ module Azure
       attr_accessor :data_disks
       attr_accessor :subnet
       attr_accessor :static_virtual_network_ipaddress
+      
+      alias_method :public_ip_address, :ipaddress
+      alias_method :private_ip_address, :private_ipaddress
+      
     end
   end
 end
