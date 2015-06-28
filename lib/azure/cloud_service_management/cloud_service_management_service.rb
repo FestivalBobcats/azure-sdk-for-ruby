@@ -52,6 +52,10 @@ module Azure
           Azure::Loggerx.info "Creating cloud service #{name}."
           request_path = '/services/hostedservices'
           body = Serialization.cloud_services_to_xml(name, options)
+          
+          require 'byebug'
+          byebug
+          
           request = client.management_request(:post, request_path, body)
           request.call
         end
